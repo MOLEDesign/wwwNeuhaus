@@ -2,14 +2,14 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
     <name>j32_neuhaus</name>
-    <version>1.0.10</version>
-    <creationDate>March 2014</creationDate>
-    <author>YOOtheme</author>
-    <authorEmail>info@yootheme.com</authorEmail>
-    <authorUrl>http://www.yootheme.com</authorUrl>
-    <copyright>Copyright (C) YOOtheme GmbH</copyright>
-    <license>YOOtheme Proprietary Use License (http://www.yootheme.com/license)</license>
-    <description>Nano3 is the July 2013 theme of the YOOtheme club. It is based on YOOtheme's Warp theme framework. NOTE: It is not free or public. This theme is for members of the YOOtheme club only.</description>
+    <version>1.0.0</version>
+    <creationDate>April 2014</creationDate>
+    <author>MOLEDesign</author>
+    <authorEmail>morgan@moledesign.biz</authorEmail>
+    <authorUrl>http://www.moledesign.biz</authorUrl>
+    <copyright>(C) Neuhaus / WARP Copyright (C) YOOtheme GmbH</copyright>
+    <license>Template design by MOLEDesign / WARP YOOtheme Proprietary Use License (http://www.yootheme.com/license)</license>
+    <description>Template for Neuhaus iFrame. Based on the YOOtheme NANO3 template framework.</description>
     <files>
         <filename>checksums</filename>
         <filename>apple_touch_icon.png</filename>
@@ -58,7 +58,7 @@
         <position settings="">debug</position>
     </positions>
     <config>
-        <fields name="params" addfieldpath="/templates/yoo_nano3/warp/systems/joomla/config/elements">
+        <fields name="params" addfieldpath="/templates/j32_neuhaus/warp/systems/joomla/config/elements">
             <fieldset name="options">
                 <field name="config" type="config" label="Config" description="" default="" />
             </fieldset>
