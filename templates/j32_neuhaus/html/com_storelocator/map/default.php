@@ -80,6 +80,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
     
         <div class="row-fluid">
         	<p><?php echo JText::_( 'INSTRUCTIONS' ); ?></p>
+            <span class="help-inline"><?php echo JText::_( 'ADDRESS' ); ?></span>
             <input type="text" id="addressInput" value="<?php echo $this->addressInput?>" class="span3" placeholder="<?php echo JText::_( 'ADDRESS_PLACEHOLDER' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
 
 
@@ -96,8 +97,8 @@ defined('_JEXEC') or die('Restricted access'); ?>
             <!-- End radius search -->
 
             <!-- New name search position -->
-
-                <input type="text" id="name_search" value="<?php echo $this->name_search?>" class="span4 rightmargin10" placeholder="<?php echo JText::_( 'COM_STORELOCATOR_NAME_SEARCH_LABEL' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
+            <span class="help-inline"><?php echo JText::_( 'NAME' ); ?></span>
+            <input type="text" id="name_search" value="<?php echo $this->name_search?>" class="span3" placeholder="<?php echo JText::_( 'COM_STORELOCATOR_NAME_SEARCH_LABEL' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
 
             <!-- End name search -->
 
