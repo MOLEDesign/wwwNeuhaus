@@ -8,6 +8,6 @@
 
 #map {float: right !important;}
 
-#sl_sidebar {float: left !important;}
+#sl_sidebar {float: left !important; margin-left: 0px !important;}
 
 /* End store locator styling */
