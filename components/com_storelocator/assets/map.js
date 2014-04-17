@@ -526,19 +526,19 @@
       	html += ' <span class="distance">(' + distance.toFixed(1) + ' ' + map_unit_text + ')</span>';
         
       if (getNodeText(node, 'address', 'sidebar') != '') 
-	  	html += '<br />' + getNodeText(node, 'address', 'sidebar');
+	  	html += '<p>' + getNodeText(node, 'address', 'sidebar') + '</p>';
         
       if (getNodeText(node, 'fulladdress', 'sidebar') != '') 
-	  	html += '<br />' + getNodeText(node, 'fulladdress', 'sidebar');
+	  	html += '<p>' + getNodeText(node, 'fulladdress', 'sidebar') + '</p>';
        
       if (getNodeText(node, 'phone', 'sidebar') != '') 
-	  	html += '<br />' + getNodeText(node, 'phone', 'sidebar');
+	  	html += '<p>' + getNodeText(node, 'phone', 'sidebar') + '</p>';
 		
 	  if (getNodeText(node, 'category', 'sidebar') != '') 
-	  	html += '<br />' + CATEGORY + ': ' + getNodeText(node, 'category', 'sidebar').replace(',',', ');
+	  	html += '<p>' + CATEGORY + ': ' + getNodeText(node, 'category', 'sidebar').replace(',',', ') + '</p>';
         
       if (getNodeText(node, 'tags', 'sidebar') != '') 
-	  	html += '<br />' + TAGS + ': ' + getNodeText(node, 'tags', 'sidebar').replace(',',', ');
+	  	html += '<p>' + TAGS + ': ' + getNodeText(node, 'tags', 'sidebar').replace(',',', ') + '</p>';
         
       
       if (getNodeText(node, 'custom1', 'sidebar') != '') 
@@ -572,7 +572,7 @@
         	html += '<a href="http://twitter.com/' + getNodeText(node, 'twitter', 'sidebar') + '" target="_blank" class="networkicon"><img src="' + JOOMLA_ROOT + '/components/com_storelocator/assets/twitter_16.png" width="16" height="16" align="absmiddle" /></a>';
         
         if (getNodeText(node, 'email', 'sidebar') != '')
-        	html += '<a href="mailto:' + getNodeText(node, 'email', 'sidebar') + '" class="networkicon"><img src="' + JOOMLA_ROOT + '/components/com_storelocator/assets/email_16.png" width="16" height="16" align="absmiddle" /></a>';
+        	html += 'E:<a href="mailto:' + getNodeText(node, 'email', 'sidebar') + '" class="networkicon">Contact Us</a>';
              
       }
         	 
