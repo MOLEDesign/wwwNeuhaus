@@ -170,7 +170,7 @@ class StorelocatorViewMap extends JViewLegacy
 		$featstate[] = (object)array('value'=>0,'text'=>JText::_('ALL_LOCATIONS'));
 		$featstate[] = (object)array('value'=>1,'text'=>JText::_('ONLY_FEATURED'));
 
-        $featstateHTML = JHTML::_('input.checkbox',   $featstate, 'featstate', 'class="span2" size="1" onchange="searchLocations()" ', 'value', 'text', (bool)$jinput->post->get('featstate', 0, 'BOOLEAN'));
+		$featstateHTML = JHTML::_('select.genericlist',   $featstate, 'featstate', 'class="span2" size="1" onchange="searchLocations()" ', 'value', 'text', (bool)$jinput->post->get('featstate', 0, 'BOOLEAN'));
 
 				
 		// Module Support
