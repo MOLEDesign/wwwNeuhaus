@@ -81,6 +81,28 @@ defined('_JEXEC') or die('Restricted access'); ?>
         <div class="row-fluid">
         	<p><?php echo JText::_( 'INSTRUCTIONS' ); ?></p>
             <input type="text" id="addressInput" value="<?php echo $this->addressInput?>" class="span10" placeholder="<?php echo JText::_( 'ADDRESS_PLACEHOLDER' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
+
+
+            <!-- New Radius search poisiton -->
+            <?php if ( $radius_search = $this->params->get( 'radiussearch_enabled', 1 ) ) : ?>
+                <span class="help-inline"><?php echo JText::_( 'RADIUS' ); ?></span>
+                <select id="radiusSelect" class="span2 rightmargin10">
+                    <?php
+                    foreach( $this->radius_list as $radius )
+                        printf("<option value=\"%d\" %s>%d %s</option>", $radius, ($this->radiusSelect==$radius)?'selected="selected"':'', $radius, ($this->map_units?JText::_( 'MILES' ):JText::_( 'KILOMETERS' )));
+                    ?>
+                </select>
+            <?php endif; ?>
+            <!-- End radius search -->
+
+            <!-- New featured search position -->
+            <?php if($featsearch_enabled = $this->params->get( 'featsearch_enabled', 1 ) ) : ?>
+                <span class="help-inline"><?php echo JText::_( 'FEATURED' ); ?></span>
+                <?php echo $this->featsearch; ?>
+            <?php endif;?>
+            <!-- End featured search -->
+
+
             <input type="button" class="btn btn-primary" onclick="searchLocations()" value="<?php echo JText::_( 'COM_STORELOCATOR_SEARCH_BTN_LABEL' ); ?>"/>
             <img src="components/com_storelocator/assets/spinner.gif" alt="Loading" style="display:none; padding-left:3px; vertical-align:middle;" id="sl_map_spinner" />
         </div>
@@ -91,21 +113,9 @@ defined('_JEXEC') or die('Restricted access'); ?>
             <?php if ( $this->params->get( 'name_search', 1 ) ) : ?>
             <input type="text" id="name_search" value="<?php echo $this->name_search?>" class="span4 rightmargin10" placeholder="<?php echo JText::_( 'COM_STORELOCATOR_NAME_SEARCH_LABEL' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
             <?php endif; ?>
+
             
-            <?php if ( $radius_search = $this->params->get( 'radiussearch_enabled', 1 ) ) : ?>
-            <span class="help-inline"><?php echo JText::_( 'RADIUS' ); ?></span>
-            <select id="radiusSelect" class="span2 rightmargin10">
-            <?php
-                foreach( $this->radius_list as $radius )
-                    printf("<option value=\"%d\" %s>%d %s</option>", $radius, ($this->radiusSelect==$radius)?'selected="selected"':'', $radius, ($this->map_units?JText::_( 'MILES' ):JText::_( 'KILOMETERS' )));
-            ?>
-            </select> 
-            <?php endif; ?>
-            
-            <?php if($this->featsearch_enabled): ?>
-            <span class="help-inline"><?php echo JText::_( 'FEATURED' ); ?></span>
-            <?php echo $this->featsearch; ?>
-            <?php endif;?>
+
        
         </div>
         <?php endif;?>
