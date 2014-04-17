@@ -80,7 +80,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
     
         <div class="row-fluid">
         	<p><?php echo JText::_( 'INSTRUCTIONS' ); ?></p>
-            <input type="text" id="addressInput" value="<?php echo $this->addressInput?>" class="span10" placeholder="<?php echo JText::_( 'ADDRESS_PLACEHOLDER' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
+            <input type="text" id="addressInput" value="<?php echo $this->addressInput?>" class="span3" placeholder="<?php echo JText::_( 'ADDRESS_PLACEHOLDER' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
 
 
             <!-- New Radius search poisiton -->
