@@ -3,3 +3,11 @@
 /* ========================================================================
    Use this file to add custom CSS easily
  ========================================================================== */
+
+/* Store locator styling */
+
+#map {float: right !important;}
+
+#sl_sidebar {float: left !important;}
+
+/* End store locator styling */
