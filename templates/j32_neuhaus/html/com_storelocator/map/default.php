@@ -147,13 +147,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
       <div id="sl_sidebar" style="height: <?php echo $this->map_height?>px;<?php if(!$this->list_enabled || $this->hide_list_onload) echo 'display:none;'; ?>" class="span3"><?php echo JText::_( 'NO_RESULTS' ); ?></div>
     </div>
   
-	<?php if ( $this->params->get( 'show_copyright', 1 ) ): ?>  
-    <div class="row-fluid">
-      <div class="span12" id="copyright-block">
-        <a title="Store Locator Joomla Component" href="http://www.sysgenmedia.com" target="_blank">Store Locator</a> by <a title="Custom Joomla Development" href="http://www.sysgenmedia.com" target="_blank">Sysgen Media LLC</a>
-      </div>
-    </div>
-    <?php endif; ?>
+
 </div>
 <?php if ( $this->params->get( 'articleid_foot', 0 ) ) : ?>
 	<?php $articleid_foot = StorelocatorHelper::getArticle($this->params->get( 'articleid_foot', 0 )); ?>
