@@ -10,4 +10,9 @@
 
 #sl_sidebar {float: left !important; margin-left: 0px !important;}
 
+#sl_sidebar div {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* End store locator styling */
