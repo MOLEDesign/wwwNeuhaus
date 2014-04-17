@@ -95,6 +95,12 @@ defined('_JEXEC') or die('Restricted access'); ?>
             <?php endif; ?>
             <!-- End radius search -->
 
+            <!-- New name search position -->
+
+                <input type="text" id="name_search" value="<?php echo $this->name_search?>" class="span4 rightmargin10" placeholder="<?php echo JText::_( 'COM_STORELOCATOR_NAME_SEARCH_LABEL' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
+
+            <!-- End name search -->
+
             <!-- New featured search position -->
             <?php if($featsearch_enabled = $this->params->get( 'featsearch_enabled', 1 ) ) : ?>
                 <span class="help-inline"><?php echo JText::_( 'FEATURED' ); ?></span>
@@ -106,19 +112,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
             <input type="button" class="btn btn-primary" onclick="searchLocations()" value="<?php echo JText::_( 'COM_STORELOCATOR_SEARCH_BTN_LABEL' ); ?>"/>
             <img src="components/com_storelocator/assets/spinner.gif" alt="Loading" style="display:none; padding-left:3px; vertical-align:middle;" id="sl_map_spinner" />
         </div>
-        
-        <?php if ( $this->params->get( 'name_search', 1 ) ||  $this->params->get( 'radiussearch_enabled', 1 ) || $this->featsearch_enabled) : ?>
-        <div class="row-fluid">
-        	<h5><strong><?php echo JText::_( 'COM_STORELOCATOR_OPTIONS_LABEL' ); ?></strong></h5>
-            <?php if ( $this->params->get( 'name_search', 1 ) ) : ?>
-            <input type="text" id="name_search" value="<?php echo $this->name_search?>" class="span4 rightmargin10" placeholder="<?php echo JText::_( 'COM_STORELOCATOR_NAME_SEARCH_LABEL' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
-            <?php endif; ?>
 
-            
-
-       
-        </div>
-        <?php endif;?>
         
         <?php if($this->catsearch_enabled > -1): ?>
         <div class="row-fluid">
