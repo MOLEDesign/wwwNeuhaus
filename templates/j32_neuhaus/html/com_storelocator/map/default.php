@@ -79,6 +79,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
     <form action="#" onsubmit="searchLocations(); return false;" id="locate_form" class="form-inline">
     
         <div class="row-fluid">
+            <div class="row-980">
         	<p><?php echo JText::_( 'INSTRUCTIONS' ); ?></p>
             <span class="help-inline"><?php echo JText::_( 'ADDRESS' ); ?></span>
             <input type="text" id="addressInput" value="<?php echo $this->addressInput?>" class="span2" placeholder="<?php echo JText::_( 'ADDRESS_PLACEHOLDER' ); ?>" onkeydown="if (event.keyCode == 13) { searchLocations(); return false; }" />
@@ -112,8 +113,9 @@ defined('_JEXEC') or die('Restricted access'); ?>
 
             <input type="button" class="btn btn-primary" onclick="searchLocations()" value="<?php echo JText::_( 'COM_STORELOCATOR_SEARCH_BTN_LABEL' ); ?>"/>
             <img src="components/com_storelocator/assets/spinner.gif" alt="Loading" style="display:none; padding-left:3px; vertical-align:middle;" id="sl_map_spinner" />
-        </div>
 
+            </div>
+        </div>
         
         <?php if($this->catsearch_enabled > -1): ?>
         <div class="row-fluid">

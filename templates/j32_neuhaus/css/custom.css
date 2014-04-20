@@ -6,6 +6,11 @@
 
 /* Store locator styling */
 
+.row-980 {
+    width: 980px;
+    margin: 0px auto;
+}
+
 #map {float: right !important;}
 
 #sl_sidebar {float: left !important; margin-left: 0px !important;}
