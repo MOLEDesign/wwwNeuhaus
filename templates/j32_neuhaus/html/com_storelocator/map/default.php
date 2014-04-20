@@ -75,7 +75,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 	<div class="sl_article_top"><?php echo $articleid_head->introtext . $articleid_head->fulltext; ?></div>
 <?php endif; ?>
 
-<div id="sl_search_container" <?php if(!$this->search_enabled) echo 'style="display:none;"'; ?> class="row-fluid">
+<div id="sl_search_container" <?php if(!$this->search_enabled) echo 'style="display:none;"'; ?>>
     <form action="#" onsubmit="searchLocations(); return false;" id="locate_form" class="form-inline">
     
         <div class="row-fluid">
@@ -136,17 +136,20 @@ defined('_JEXEC') or die('Restricted access'); ?>
 </div>
 <br/>
   
-<div id="sl_results_container" class="row-fluid">
+<div id="sl_results_container">
+
+    <div class="row-fluid">
+        <div id="sl_sidebar" style="height: <?php echo $this->map_height?>px;<?php if(!$this->list_enabled || $this->hide_list_onload) echo 'display:none;'; ?>" class="span3"><?php echo JText::_( 'NO_RESULTS' ); ?></div>
+        <div id="map" style="height: <?php echo intval($this->map_height)?>px" class="<?php echo (!$this->list_enabled || $this->hide_list_onload)?'span12':'span9'; ?>"></div>
+
+    </div>
+
 
     <div class="row-fluid">
       <div class="span12" id="sl_locate_results" <?php if(!$this->search_enabled) echo 'style="display:none;"'; ?>><?php echo JText::_( 'PRESEARCH_TEXT' ); ?></div>
     </div>
 
-    <div class="row-fluid">
-        <div id="sl_sidebar" style="height: <?php echo $this->map_height?>px;<?php if(!$this->list_enabled || $this->hide_list_onload) echo 'display:none;'; ?>" class="span3"><?php echo JText::_( 'NO_RESULTS' ); ?></div>
-  	  <div id="map" style="height: <?php echo intval($this->map_height)?>px" class="<?php echo (!$this->list_enabled || $this->hide_list_onload)?'span12':'span9'; ?>"></div>
 
-    </div>
 
 
 </div>
